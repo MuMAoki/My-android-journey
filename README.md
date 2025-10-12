@@ -32,6 +32,8 @@ Hardware Aceleration
 
 #in Termux
 
+pkill virgl_test_server_android
+
 virgl_test_server_android &
 
 #in proot
@@ -41,6 +43,10 @@ export GALLIUM_DRIVER=virpipe
 export LIBGL_ALWAYS_INDIRECT=1
 
 export MESA_GL_VERSION_OVERRIDE=3.2
+
+#Test
+
+ps -A | grep virgl
 
 
 
